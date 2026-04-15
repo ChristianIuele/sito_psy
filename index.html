@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dott.ssa Giada Iuele – Psicologa | San Lucido (CS)</title>
+<meta name="description" content="Dott.ssa Giada Iuele, psicologa specializzata in terapia cognitivo-comportamentale e ABA a San Lucido (CS). Supporto psicologico per bambini, adolescenti e adulti.">
+<meta name="keywords" content="psicologa San Lucido, psicologa Cosenza, ABA Calabria, terapia cognitivo comportamentale, Giada Iuele">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sage: #7a9e8e;
+    --sage-light: #b5cfc4;
+    --sage-pale: #e8f0ed;
+    --clay: #c4957a;
+    --clay-light: #e8c9b8;
+    --cream: #f7f4ef;
+    --warm-white: #faf9f6;
+    --text-dark: #2c2826;
+    --text-mid: #5a5450;
+    --text-light: #8a8480;
+    --border: rgba(44,40,38,0.1);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250,249,246,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo span { color: var(--sage); }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-mid);
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--sage); }
+
+  .nav-cta {
+    background: var(--sage);
+    color: white !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: #5e8070 !important; color: white !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-dark);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    z-index: 99;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--text-mid);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobile-menu a:last-child { border-bottom: none; color: var(--sage); font-weight: 500; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 64px;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 4rem 6rem 5rem;
+    position: relative;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--sage);
+    vertical-align: middle;
+    margin-right: 0.75rem;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 4vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--sage);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+    margin-bottom: 3rem;
+    max-width: 440px;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--sage);
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.15s;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-primary:hover { background: #5e8070; transform: translateY(-1px); }
+
+  .btn-secondary {
+    color: var(--text-mid);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+    font-weight: 400;
+  }
+
+  .btn-secondary::after {
+    content: '→';
+    transition: transform 0.2s;
+  }
+
+  .btn-secondary:hover { color: var(--sage); }
+  .btn-secondary:hover::after { transform: translateX(4px); }
+
+  .hero-right {
+    background: var(--sage-pale);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .hero-illustration {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 3rem;
+  }
+
+  .hero-card {
+    background: white;
+    border-radius: 24px;
+    padding: 2.5rem;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 24px 60px rgba(122,158,142,0.15);
+    position: relative;
+  }
+
+  .hero-card-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--sage-light), var(--clay-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-card p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .card-info-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-mid);
+  }
+
+  .card-info-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--sage-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .card-info-icon svg { width: 14px; height: 14px; stroke: var(--sage); fill: none; stroke-width: 2; }
+
+  .floating-badge {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    background: var(--clay);
+    color: white;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    box-shadow: 0 8px 24px rgba(196,149,122,0.3);
+  }
+
+  /* SECTIONS */
+  section { padding: 6rem 2rem; }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--sage);
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title em { font-style: italic; color: var(--sage); }
+
+  /* CHI SONO */
+  #chi-sono { background: var(--cream); }
+
+  .chi-sono-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .chi-sono-text p {
+    color: var(--text-mid);
+    margin-bottom: 1.25rem;
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .chi-sono-values {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    transition: box-shadow 0.2s;
+  }
+
+  .value-item:hover { box-shadow: 0 8px 24px rgba(122,158,142,0.1); }
+
+  .value-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--sage);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .value-item strong {
+    display: block;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .value-item span {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+  }
+
+  .qualifications {
+    background: white;
+    border-radius: 24px;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+  }
+
+  .qualifications h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+  }
+
+  .qual-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .qual-item {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .qual-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .qual-year {
+    font-size: 0.75rem;
+    color: var(--clay);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    min-width: 60px;
+    padding-top: 2px;
+  }
+
+  .qual-content strong {
+    display: block;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .qual-content span {
+    font-size: 0.82rem;
+    color: var(--text-light);
+  }
+
+  /* SERVIZI */
+  #servizi { background: var(--warm-white); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: box-shadow 0.25s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--sage-light);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { box-shadow: 0 16px 40px rgba(122,158,142,0.12); transform: translateY(-3px); }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--sage-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-icon svg { width: 22px; height: 22px; stroke: var(--sage); fill: none; stroke-width: 1.8; }
+
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card p {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .service-card .service-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 500;
+  }
+
+  /* APPROCCIO */
+  #approccio { background: var(--sage); color: white; }
+
+  #approccio .section-label { color: rgba(255,255,255,0.6); }
+  #approccio .section-label::before { background: rgba(255,255,255,0.4); }
+  #approccio .section-title { color: white; }
+  #approccio .section-title em { color: var(--clay-light); }
+
+  .approccio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .approccio-text p {
+    color: rgba(255,255,255,0.8);
+    line-height: 1.8;
+    font-weight: 300;
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .approccio-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+
+  .pill {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50px;
+    padding: 0.4rem 1rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .step-content strong {
+    display: block;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 0.25rem;
+  }
+
+  .step-content span {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* FAQ */
+  #faq { background: var(--cream); }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 3rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: white;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    gap: 1rem;
+  }
+
+  .faq-toggle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--sage-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.3s;
+    color: var(--sage);
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  .faq-item.open .faq-toggle {
+    background: var(--sage);
+    color: white;
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .faq-item.open .faq-answer { max-height: 300px; }
+
+  .faq-answer-inner {
+    padding: 0 1.5rem 1.25rem;
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .faq-cta-box {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    position: sticky;
+    top: 100px;
+  }
+
+  .faq-cta-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+
+  .faq-cta-box p {
+    color: var(--text-mid);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  .faq-cta-box .btn-primary { display: inline-block; }
+
+  /* CONTATTI */
+  #contatti { background: var(--warm-white); }
+
+  .contatti-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    color: var(--text-dark);
+    background: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 3px rgba(122,158,142,0.12);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 130px; }
+
+  .form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    margin-top: 0.5rem;
+  }
+
+  .form-checkbox input[type="checkbox"] { margin-top: 2px; accent-color: var(--sage); width: 16px; height: 16px; flex-shrink: 0; }
+
+  .form-checkbox a { color: var(--sage); }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-info-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+  }
+
+  .contact-info-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+
+  .contact-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .contact-row-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--sage-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-row-icon svg { width: 16px; height: 16px; stroke: var(--sage); fill: none; stroke-width: 2; }
+
+  .contact-row a { color: var(--text-dark); text-decoration: none; }
+  .contact-row a:hover { color: var(--sage); }
+
+  .map-placeholder {
+    background: var(--sage-pale);
+    border-radius: 20px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--sage);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background 0.2s;
+    border: 1px solid var(--border);
+  }
+
+  .map-placeholder:hover { background: var(--sage-light); color: white; }
+
+  .map-placeholder svg { width: 28px; height: 28px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+
+  /* FOOTER */
+  footer {
+    background: var(--text-dark);
+    color: rgba(255,255,255,0.6);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  footer .footer-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  footer .footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  footer p { font-size: 0.82rem; line-height: 1.7; }
+
+  footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.78rem;
+  }
+
+  footer .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; }
+  footer .footer-links a:hover { color: white; }
+
+  /* FORM FEEDBACK */
+  .form-success {
+    display: none;
+    background: var(--sage-pale);
+    border: 1px solid var(--sage-light);
+    border-radius: 12px;
+    padding: 1.25rem;
+    color: var(--sage);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .hero-right { min-height: 360px; }
+    .hero-left { padding: 4rem 2rem; }
+
+    .chi-sono-grid,
+    .approccio-grid,
+    .contatti-grid,
+    .faq-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .services-grid { grid-template-columns: 1fr; }
+
+    section { padding: 4rem 1.5rem; }
+
+    .faq-cta-box { position: static; }
+  }
+
+  @media (max-width: 600px) {
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .hero-card { max-width: 280px; }
+  }
+
+  /* Smooth fade in */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-left > * {
+    animation: fadeUp 0.7s ease both;
+  }
+
+  .hero-left > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-left > *:nth-child(2) { animation-delay: 0.2s; }
+  .hero-left > *:nth-child(3) { animation-delay: 0.3s; }
+  .hero-left > *:nth-child(4) { animation-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<!-- NAVIGAZIONE -->
+<nav>
+  <a href="#" class="nav-logo">Dott.ssa <span>Giada Iuele</span></a>
+  <ul class="nav-links">
+    <li><a href="#chi-sono">Chi sono</a></li>
+    <li><a href="#servizi">Servizi</a></li>
+    <li><a href="#approccio">Approccio</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contatti" class="nav-cta">Contattami</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#chi-sono" onclick="toggleMenu()">Chi sono</a>
+  <a href="#servizi" onclick="toggleMenu()">Servizi</a>
+  <a href="#approccio" onclick="toggleMenu()">Approccio</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  <a href="#contatti" onclick="toggleMenu()">Contattami</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <span class="hero-tag">Psicologa &amp; Specialista ABA</span>
+    <h1>Ogni percorso comincia da <em>un passo</em> coraggioso.</h1>
+    <p class="hero-sub">Supporto psicologico basato sull'evidenza per bambini, adolescenti e adulti. Un luogo sicuro dove ascoltarti, capirti e crescere insieme.</p>
+    <div class="hero-actions">
+      <a href="#contatti" class="btn-primary">Prenota un colloquio</a>
+      <a href="#chi-sono" class="btn-secondary">Scopri di più</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-illustration">
+      <div class="hero-card">
+        <div class="floating-badge">San Lucido, CS</div>
+        <div class="hero-card-avatar">GI</div>
+        <h3>Dott.ssa Giada Iuele</h3>
+        <p>Psicologa · Spec. ABA · CBT</p>
+        <div class="card-info">
+          <div class="card-info-row">
+            <div class="card-info-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            Corso Umberto I, 65 – San Lucido
+          </div>
+          <div class="card-info-row">
+            <div class="card-info-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            +39 348 899 0162
+          </div>
+          <div class="card-info-row">
+            <div class="card-info-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            dott.ssagiadaiuele@gmail.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHI SONO -->
+<section id="chi-sono">
+  <div class="section-inner">
+    <div class="chi-sono-grid">
+      <div class="chi-sono-text">
+        <div class="section-label">Chi sono</div>
+        <h2 class="section-title">Una professionista al tuo <em>fianco</em></h2>
+        <p>Sono Giada Iuele, psicologa iscritta all'Albo, specializzata in terapia cognitivo-comportamentale (CBT) e nell'Applied Behavior Analysis (ABA). Lavoro a San Lucido, in provincia di Cosenza, e offro percorsi psicologici personalizzati per bambini, adolescenti e adulti.</p>
+        <p>Il mio approccio è scientifico e centrato sulla persona: non esiste un percorso uguale per tutti. Ogni intervento è costruito intorno alle tue esigenze, al tuo ritmo e ai tuoi obiettivi.</p>
+        <div class="chi-sono-values">
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div>
+              <strong>Ascolto senza giudizio</strong>
+              <span>Uno spazio sicuro dove esprimere pensieri ed emozioni liberamente.</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div>
+              <strong>Intervento basato sull'evidenza</strong>
+              <span>Tecniche validate dalla ricerca scientifica, adattate alla tua storia.</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div>
+              <strong>Percorsi su misura</strong>
+              <span>Nessun protocollo rigido: costruiamo insieme il tuo cammino.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="qualifications">
+        <h3>Formazione e specializzazioni</h3>
+        <div class="qual-list">
+          <div class="qual-item">
+            <span class="qual-year">Laurea</span>
+            <div class="qual-content">
+              <strong>Laurea Magistrale in Psicologia</strong>
+              <span>Clinica e della salute</span>
+            </div>
+          </div>
+          <div class="qual-item">
+            <span class="qual-year">Spec.</span>
+            <div class="qual-content">
+              <strong>Applied Behavior Analysis (ABA)</strong>
+              <span>Intervento comportamentale intensivo per autismo e disturbi dello sviluppo</span>
+            </div>
+          </div>
+          <div class="qual-item">
+            <span class="qual-year">CBT</span>
+            <div class="qual-content">
+              <strong>Terapia Cognitivo-Comportamentale</strong>
+              <span>Ansia, depressione, disturbi del comportamento</span>
+            </div>
+          </div>
+          <div class="qual-item">
+            <span class="qual-year">Albo</span>
+            <div class="qual-content">
+              <strong>Iscritta all'Ordine degli Psicologi</strong>
+              <span>Regione Calabria</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section id="servizi">
+  <div class="section-inner">
+    <div class="section-label">Servizi</div>
+    <h2 class="section-title">Di cosa <em>mi occupo</em></h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <h3>Consulenza Individuale</h3>
+        <p>Percorsi one-to-one per affrontare ansia, depressione, bassa autostima, difficoltà relazionali e gestione delle emozioni. Un processo di crescita personale guidato.</p>
+        <span class="service-tag">Adulti e adolescenti</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Intervento ABA</h3>
+        <p>Programmi di Applied Behavior Analysis scientificamente validati per bambini con autismo (ASD) e disturbi del neurosviluppo. Percorsi individuali e di supporto alla famiglia.</p>
+        <span class="service-tag">Bambini e famiglie</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Supporto Genitoriale</h3>
+        <p>Consulenza e formazione per genitori di bambini con bisogni speciali. Strategie pratiche per la gestione quotidiana, comunicazione efficace e costruzione di ambienti positivi.</p>
+        <span class="service-tag">Famiglie</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Colloqui Online</h3>
+        <p>Sessioni in videochiamata sicura per chi non può raggiungere lo studio fisicamente. Stessa qualità e riservatezza del colloquio in presenza, con la comodità di casa tua.</p>
+        <span class="service-tag">Da remoto</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Valutazione Psicologica</h3>
+        <p>Assessment cognitivo, emotivo e comportamentale con test standardizzati. Utile per diagnosi, certificazioni scolastiche, chiarezza clinica e pianificazione degli interventi.</p>
+        <span class="service-tag">Tutte le età</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        </div>
+        <h3>Psicoeducazione e Workshop</h3>
+        <p>Incontri formativi su tematiche di salute mentale, gestione delle emozioni, stress e benessere psicologico. Pensati per scuole, aziende e gruppi.</p>
+        <span class="service-tag">Gruppi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROCCIO -->
+<section id="approccio">
+  <div class="section-inner">
+    <div class="section-label">Il mio metodo</div>
+    <h2 class="section-title">Un approccio <em>scientifico</em> e umano</h2>
+    <div class="approccio-grid">
+      <div class="approccio-text">
+        <p>La terapia cognitivo-comportamentale (CBT) e l'Applied Behavior Analysis (ABA) condividono lo stesso fondamento: i comportamenti, i pensieri e le emozioni possono cambiare. Non sono dati per sempre.</p>
+        <p>Lavoro analizzando in modo preciso le situazioni problematiche, individuando i meccanismi che le mantengono e costruendo con te strategie concrete e misurabili per superarle.</p>
+        <p>Il cambiamento non è un mistero: è il risultato di un lavoro metodico, compassionevole e scientificamente fondato.</p>
+        <div class="approccio-pills">
+          <span class="pill">Cognitivo-Comportamentale</span>
+          <span class="pill">Applied Behavior Analysis</span>
+          <span class="pill">Evidence-Based</span>
+          <span class="pill">Mindfulness</span>
+          <span class="pill">Psicoeducazione</span>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Primo colloquio conoscitivo</strong>
+            <span>Uno spazio gratuito di 30 minuti per capire il tuo bisogno e valutare insieme la strada da percorrere.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Valutazione e obiettivi</strong>
+            <span>Attraverso colloqui e, se necessario, test standardizzati, definiamo una fotografia chiara della situazione e fissiamo obiettivi realistici.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>Percorso terapeutico</strong>
+            <span>Sessioni regolari con tecniche CBT e ABA adattate a te. Il progresso viene monitorato e il piano aggiornato in base ai risultati.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <strong>Autonomia e mantenimento</strong>
+            <span>Il percorso finisce quando hai gli strumenti per procedere da solo. La terapia non è un supporto eterno: è un investimento su te stesso.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-label">Domande frequenti</div>
+    <h2 class="section-title">Hai dei <em>dubbi?</em></h2>
+    <div class="faq-grid">
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Quanto costa un colloquio?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Il costo delle sedute varia in base al tipo di intervento e alla durata. Contattami per ricevere informazioni personalizzate. Il primo colloquio conoscitivo è gratuito e senza impegno.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Posso fare sedute online?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sì. I colloqui online si svolgono tramite piattaforme sicure come Google Meet o Zoom, in un contesto che garantisce la massima riservatezza. La qualità del lavoro è equivalente al percorso in presenza.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Cosa si intende per ABA?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">L'Applied Behavior Analysis è una disciplina scientifica che studia e modifica il comportamento attraverso tecniche strutturate. È considerata uno degli interventi più efficaci per bambini con autismo (ASD) e disturbi del neurosviluppo. Si basa sul rinforzo positivo e su programmi individualizzati e misurabili.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Quanto dura un percorso terapeutico?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Non esiste una durata standard: dipende dalla problematica, dagli obiettivi e dalla risposta individuale. Alcuni percorsi si concludono in pochi mesi, altri richiedono più tempo. Valutiamo insieme i progressi regolarmente.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Come posso prenotare un appuntamento?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Puoi contattarmi tramite il modulo qui accanto, via email o WhatsApp. Rispondo entro 24 ore nei giorni lavorativi. Il primo colloquio si prenota direttamente con me, senza intermediari.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Lavori anche con adulti o solo con bambini?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Lavoro con bambini, adolescenti e adulti. Per i bambini con ASD utilizzo prevalentemente l'approccio ABA; per adolescenti e adulti integro tecniche CBT e altri approcci evidence-based in base alle esigenze specifiche.</div>
+          </div>
+        </div>
+      </div>
+      <div class="faq-cta-box">
+        <h3>Non hai trovato la risposta che cercavi?</h3>
+        <p>Scrivimi o chiamami direttamente. Il primo colloquio conoscitivo è gratuito: è il momento migliore per capire se posso davvero aiutarti e come.</p>
+        <a href="#contatti" class="btn-primary">Contattami ora</a>
+        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+          <div class="contact-row" style="padding: 0; border: none;">
+            <div class="contact-row-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <a href="tel:+393488990162">+39 348 899 0162</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti">
+  <div class="section-inner">
+    <div class="section-label">Contatti</div>
+    <h2 class="section-title">Inizia il tuo <em>percorso</em></h2>
+    <div class="contatti-grid">
+      <div>
+        <form class="contact-form" onsubmit="handleSubmit(event)" name="contatti" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contatti">
+          <input type="hidden" name="bot-field" style="display:none">
+          <div class="form-group">
+            <label for="nome">Nome e Cognome</label>
+            <input type="text" id="nome" name="nome" placeholder="Mario Rossi" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="mario@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Telefono (facoltativo)</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+39 000 000 0000">
+          </div>
+          <div class="form-group">
+            <label for="servizio">Tipo di richiesta</label>
+            <select id="servizio" name="servizio">
+              <option value="">Seleziona un'opzione...</option>
+              <option>Primo colloquio conoscitivo (gratuito)</option>
+              <option>Consulenza individuale adulti/adolescenti</option>
+              <option>Intervento ABA per bambini</option>
+              <option>Supporto genitoriale</option>
+              <option>Valutazione psicologica</option>
+              <option>Colloquio online</option>
+              <option>Altro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="messaggio">Messaggio</label>
+            <textarea id="messaggio" name="messaggio" placeholder="Descrivi brevemente la tua richiesta o il motivo per cui mi stai contattando..."></textarea>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">Ho letto e accetto la <a href="#privacy-policy">Privacy Policy</a>. Consento al trattamento dei miei dati personali per essere ricontattato dalla Dott.ssa Giada Iuele.</label>
+          </div>
+          <button type="submit" class="btn-primary" style="border: none; cursor: pointer; margin-top: 0.5rem;">Invia messaggio</button>
+        </form>
+        <div class="form-success" id="form-success">
+          Messaggio inviato! Ti risponderò entro 24 ore nei giorni lavorativi.
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <div class="contact-info-card">
+          <h3>Dove trovarmi</h3>
+          <div class="contact-row">
+            <div class="contact-row-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.9rem;">Studio</div>
+              <div style="font-size: 0.85rem; color: var(--text-mid);">Corso Umberto I, 65 – San Lucido (CS)</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.9rem;">Telefono / WhatsApp</div>
+              <a href="tel:+393488990162" style="font-size: 0.85rem; color: var(--text-mid);">+39 348 899 0162</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-row-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div style="font-weight: 500; font-size: 0.9rem;">Email</div>
+              <a href="mailto:dott.ssagiadaiuele@gmail.com" style="font-size: 0.85rem; color: var(--text-mid);">dott.ssagiadaiuele@gmail.com</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://www.google.com/maps/search/Corso+Umberto+I+65+San+Lucido+CS" target="_blank" class="map-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Apri su Google Maps
+        </a>
+
+        <div class="contact-info-card">
+          <h3>Orari di disponibilità</h3>
+          <div class="contact-row">
+            <div style="font-size: 0.88rem; width: 100%;">
+              <div style="display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid var(--border);">
+                <span style="color: var(--text-mid);">Lunedì – Venerdì</span>
+                <span style="font-weight: 500;">9:00 – 18:00</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding: 0.4rem 0;">
+                <span style="color: var(--text-mid);">Sabato</span>
+                <span style="font-weight: 500;">Su richiesta</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 0.82rem; color: var(--text-light); margin-top: 0.75rem; font-style: italic;">Rispondo entro 24 ore nei giorni lavorativi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name">Dott.ssa Giada Iuele</div>
+    <p>Psicologa iscritta all'Albo degli Psicologi della Calabria<br>
+    Specializzata in ABA e Terapia Cognitivo-Comportamentale<br>
+    Corso Umberto I, 65 – San Lucido (CS) – P.IVA in corso di attivazione</p>
+    <div class="footer-links">
+      <a href="#privacy-policy">Privacy Policy</a>
+      <a href="#cookie-policy">Cookie Policy</a>
+      <a href="mailto:dott.ssagiadaiuele@gmail.com">Email</a>
+      <a href="tel:+393488990162">Telefono</a>
+    </div>
+    <p style="margin-top: 1.5rem; font-size: 0.72rem; color: rgba(255,255,255,0.25);">© 2026 Dott.ssa Giada Iuele – Tutti i diritti riservati</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  var m = document.getElementById('mobile-menu');
+  m.classList.toggle('open');
+}
+
+function toggleFaq(btn) {
+  var item = btn.closest('.faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el) {
+    el.classList.remove('open');
+  });
+  if (!isOpen) item.classList.add('open');
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  var form = e.target;
+  var data = new FormData(form);
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(data).toString()
+  }).then(function() {
+    form.style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }).catch(function() {
+    alert('Errore nell\'invio. Prova a contattarmi direttamente via email.');
+  });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('mobile-menu').classList.remove('open');
+    }
+  });
+});
+</script>
+</body>
+</html>
