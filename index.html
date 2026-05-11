@@ -853,8 +853,21 @@
 
   .contact-row-icon svg { width: 16px; height: 16px; stroke: var(--sage); fill: none; stroke-width: 2; }
 
-  .contact-row a { color: var(--text-dark); text-decoration: none; }
+  .contact-row a { 
+    color: var(--text-dark); 
+    text-decoration: none; 
+    /* Fix per spezzare l'email su mobile */
+    overflow-wrap: break-word; 
+    word-break: break-all; 
+  }
+  
   .contact-row a:hover { color: var(--sage); }
+
+  /* Fix per impedire a iPhone/Safari di far diventare blu il numero di telefono */
+  a[href^="tel"] {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
 
   .map-placeholder {
     background: var(--sage-pale);
